@@ -1,9 +1,9 @@
-var transformer = require('dat-transformer');
-var tNumber = transformer('number');
-var tInteger = transformer('integer');
+var Conversion = require('transformer-conversion');
+var tNumber = require('transformer.number');
+var tInteger = require('transformer.integer');
 // require any other modules you may need here.
 
-module.exports = transformer.Conversion(tNumber, tInteger, convert);
+module.exports = Conversion(tNumber, tInteger, convert);
 
 function convert(num) {
   return Math.round(num);
